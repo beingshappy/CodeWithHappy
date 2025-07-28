@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | CodeWithHappy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <span class="logo-text">CodeWithHappy</span>
+            </div>
+
+            <nav class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="tutorial.html">Tutorials</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-2">
+
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+
+                <div class="auth-buttons">
+                    <button class="btn-primary">Sign up now</button>
+                </div>
+
+                <div class="theme-toggle">
+                    <button class="btn-secondary">Light</button>
+                    <button class="btn-secondary">Dark</button>
+                </div>
+            </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-wrapper">
+        <div class="contact-container">
+            <h2>Get in Touch</h2>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="social-container">
+            <h3>Connect with Me</h3>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/beingshappy/" target="_blank" class="social-icon linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/beingshappy" target="_blank" class="social-icon github">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=satpathy707@gmail.com" class="social-icon gmail"
+                    target="_blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+
+
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup -->
+    <div id="thankYouPopup" class="popup hidden">
+        <div class="popup-content">
+            <h2>🎉 Thank You!</h2>
+            <p>Your message has been sent successfully.</p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+
+    <footer class="footer-glass">
+        <div class="footer-wrapper">
+
+            <div class="footer-brand">
+                <h2>&lt;/&gt; CodeWithHappy</h2>
+                <p>Empowering self-taught developers — one project at a time.</p>
+                <div class="footer-quote">“Dream. Code. Deploy.”</div>
+            </div>
+
+            <div class="footer-links-group">
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Notes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="footer-icons">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+
+                <div class="footer-connect">
+                    <h4>Quick Connect</h4>
+                    <p>Stay inspired. Follow us on Instagram for daily dev tips & behind-the-scenes!</p>
+                    <a href="https://instagram.com/beingshappy" target="_blank" class="insta-btn">
+                        <i class="fa-brands fa-instagram"></i> Follow on Instagram
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-credit">
+            <p>Built with ❤️ by CodeWithHappy · © 2025 All rights reserved.</p>
+        </div>
+
+        <!-- Scroll-to-top link -->
+        <a href="#" class="scrollBtn" title="Back to Top">↑</a>
+    </footer>
+
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
