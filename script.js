@@ -1,52 +1,92 @@
-async function loadNotes() {
-  try {
-    const res = await fetch('http://localhost:5000/api/notes');
-    const notes = await res.json();
-    const grid = document.getElementById('notes-grid');
-    grid.innerHTML = '';
-    notes.forEach(note => {
-      const d = document.createElement('div');
-      d.className = 'notes-card';
-      d.innerHTML = `
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="${note.title}">
-        <h3>${note.title}</h3>
-        <p>${note.subject || 'Notes available for download'}</p>
-        <div class="btn-group">
-          <a href="http://localhost:5000${note.fileUrl}" class="btn-notes" download>PDF Notes</a>
-        </div>`;
-      grid.appendChild(d);
-    });
-  } catch (err) {
-    console.error(err);
+document.querySelectorAll(".submenu").forEach(function (submenu) {
+  submenu.addEventListener("mouseenter", function () {
+    const submenuDropdown = this.querySelector(".dropdown-submenu");
+    if (!submenuDropdown) return;
+
+    // Remove class first to reset position
+    submenuDropdown.classList.remove("open-left");
+
+    const rect = submenuDropdown.getBoundingClientRect();
+    const overflowRight = rect.right > window.innerWidth;
+
+    if (overflowRight) {
+      submenuDropdown.classList.add("open-left");
+    }
+  });
+});
+
+function adjustCustomDropdownPosition(el) {
+  const menu = el.querySelector(".custom-menu");
+  if (!menu) return;
+
+  menu.classList.remove("open-left");
+
+  const rect = menu.getBoundingClientRect();
+  const overflowRight = rect.right > window.innerWidth;
+
+  if (overflowRight) {
+    menu.classList.add("open-left");
   }
 }
 
-window.addEventListener('DOMContentLoaded', loadNotes);
-
-
-
-function scrollToTop() {
-    document.querySelector('.scroll-content').scrollTo({
-      top: 0,
-      behavior: 'smooth'
+// Attach on hover for all custom dropdowns
+document
+  .querySelectorAll(".nav-item.custom-dropdown")
+  .forEach(function (dropdown) {
+    dropdown.addEventListener("mouseenter", function () {
+      adjustCustomDropdownPosition(dropdown);
     });
-  }
+  });
 
-  function scrollToBottom() {
-    const content = document.querySelector('.scroll-content');
-    content.scrollTo({
-      top: content.scrollHeight,
-      behavior: 'smooth'
-    });
-  }
+// async function loadNotes() {
+//   try {
+//     const res = await fetch("http://localhost:5000/api/notes");
+//     const notes = await res.json();
+//     const grid = document.getElementById("notes-grid");
+//     grid.innerHTML = "";
+//     notes.forEach((note) => {
+//       const d = document.createElement("div");
+//       d.className = "notes-card";
+//       d.innerHTML = `
+//         <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="${
+//           note.title
+//         }">
+//         <h3>${note.title}</h3>
+//         <p>${note.subject || "Notes available for download"}</p>
+//         <div class="btn-group">
+//           <a href="http://localhost:5000${
+//             note.fileUrl
+//           }" class="btn-notes" download>PDF Notes</a>
+//         </div>`;
+//       grid.appendChild(d);
+//     });
+//   } catch (err) {
+//     console.error(err);
+//   }
+// }
 
+// window.addEventListener("DOMContentLoaded", loadNotes);
 
+// function scrollToTop() {
+//   document.querySelector(".scroll-content").scrollTo({
+//     top: 0,
+//     behavior: "smooth",
+//   });
+// }
 
-  // contact page
-  const form = document.getElementById('contactForm');
-const popup = document.getElementById('thankYouPopup');
+// function scrollToBottom() {
+//   const content = document.querySelector(".scroll-content");
+//   content.scrollTo({
+//     top: content.scrollHeight,
+//     behavior: "smooth",
+//   });
+// }
 
-form.addEventListener('submit', async function (e) {
+// contact page
+const form = document.getElementById("contactForm");
+const popup = document.getElementById("thankYouPopup");
+
+form.addEventListener("submit", async function (e) {
   e.preventDefault();
 
   const formData = new FormData(form);
@@ -56,13 +96,13 @@ form.addEventListener('submit', async function (e) {
       method: "POST",
       body: formData,
       headers: {
-        Accept: "application/json"
-      }
+        Accept: "application/json",
+      },
     });
 
     if (response.ok) {
       form.reset();
-      popup.classList.remove('hidden');
+      popup.classList.remove("hidden");
     } else {
       alert("Something went wrong. Please try again.");
     }
@@ -72,9 +112,7 @@ form.addEventListener('submit', async function (e) {
 });
 
 function closePopup() {
-  popup.classList.add('hidden');
+  popup.classList.add("hidden");
 }
-
-
 
 // project sec

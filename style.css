@@ -172,6 +172,208 @@ ul {
 }
 
 
+/* Submenu wrapper */
+.submenu {
+  position: relative;
+}
+
+/* Dropdown-submenu style */
+.dropdown-submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: var(--primary-bg, #222); /* fallback color */
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  min-width: 180px;
+  padding: 10px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+
+  /* Hide by default */
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.35s ease;
+}
+
+/* Show submenu on hover */
+.submenu:hover .dropdown-submenu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Submenu link styles */
+.dropdown-submenu li a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--gold, #ffc107); /* fallback color */
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.dropdown-submenu li a:hover {
+  background: var(--gold, #ffc107);
+  color: #000;
+  border-radius: 8px;
+}
+/* Optional override class (flip left if needed) */
+.dropdown-submenu.open-left {
+  left: auto;
+  right: 100%;
+}
+
+
+
+/* Dropdown Wrapper */
+.nav-item.custom-dropdown {
+  position: relative;
+}
+
+/* Toggle Styles */
+.custom-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+/* Dropdown Menu Styles */
+.custom-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: var(--primary-bg);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 10px 0;
+  min-width: 180px;
+  z-index: 100;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+
+  /* Animation styles */
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-menu li {
+  width: 100%;
+}
+
+.custom-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--gold);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.custom-menu a:hover {
+  background: var(--gold);
+  color: #000;
+  border-radius: 8px;
+}
+
+/* Show Dropdown on Hover */
+.nav-item.custom-dropdown:hover .custom-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Flip to left if needed */
+.custom-menu.open-left {
+  left: auto !important;
+  right: 0;
+}
+
+
+
+
+/* new */
+.roadmap-container {
+ max-width: 1330px;
+    margin: 40px auto;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 16px;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.roadmap-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #fff; /* for glass effect */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 30px;
+}
+
+
+.roadmap-card {
+  background: rgba(255, 255, 255, 0.08); /* glass */
+  border-radius: 16px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.roadmap-card:hover {
+  transform: translateY(-5px);
+}
+
+.roadmap-card h2 {
+  font-size: 1.5rem;
+  color: #ffdd57;
+  margin-bottom: 10px;
+}
+
+.roadmap-card p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+.roadmap-card a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  background: #ffdd57;
+  padding: 10px 16px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.roadmap-card a:hover {
+  background: #f1c40f;
+}
+
+
+
 
 
 .search-bar {
@@ -931,26 +1133,21 @@ ul {
   background: #e6c200;
 }
 
-.scroll-content {
-  max-height: 500px;
-  overflow-y: auto;
-  background: rgba(255, 255, 255, 0.04);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(12px);
-  border-radius: 12px;
-  padding: 16px;
-  scroll-behavior: smooth;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* IE/Edge */
+/* .scroll-content {
+  background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 25px 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: transform 0.3s ease;
 }
 
 .scroll-content::-webkit-scrollbar {
   display: none;
-  /* Chrome/Safari */
+  
 }
 
 
@@ -965,7 +1162,30 @@ ul {
   line-height: 1.6;
   color: #ddd;
   margin-bottom: 10px;
+} */
+
+.scroll-text {
+  max-height: 220px; /* Or your desired limit */
+  overflow-y: scroll;
+  padding-right: 10px;
+
+  /* Hide scrollbar - for most modern browsers */
+  scrollbar-width: none; /* Firefox */
 }
+/* Optional: Customize scrollbar */
+.scroll-text::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-text::-webkit-scrollbar-thumb {
+  background-color: #007BFF;
+  border-radius: 10px;
+}
+.scroll-text::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+
+
 
 /* notes section */
 /* NOTES SECTION */
