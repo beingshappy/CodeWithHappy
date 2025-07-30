@@ -1342,6 +1342,120 @@ ul {
   box-shadow: 0 10px 24px rgba(212, 175, 55, 0.35);
 }
 
+/* tools-section */
+.tools-section {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 100%;
+}
+
+.tool-full {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.tool-full h2 {
+  font-size: 1.6rem;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.tool-full iframe {
+  width: 100%;
+  height: 420px;
+  border: none;
+  border-radius: 12px;
+  background: white;
+}
+
+
+/* free-assets */
+/* ===== Free Assets Section ===== */
+.free-assets {
+  padding: 80px 20px;
+  /* background: linear-gradient(to right, #1e1e2f, #202034); */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+.free-assets .section-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.asset-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin: 40px;
+}
+
+.asset-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.asset-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+}
+
+.asset-card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3));
+}
+
+.asset-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.asset-card p {
+  font-size: 15px;
+  color: #ccc;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.visit-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #ff6b00;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.visit-btn:hover {
+  background: #e65c00;
+  transform: scale(1.05);
+}
+
+
 
 
 /* contact page */
