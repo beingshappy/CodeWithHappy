@@ -199,7 +199,8 @@ ul {
 
 
 .main-container {
-  max-width: 1300px; /* 👈 Was 1400px, now narrower */
+  max-width: 1300px;
+  /* 👈 Was 1400px, now narrower */
   margin: 0 auto;
   padding: 40px;
   border-radius: 24px;
@@ -219,7 +220,8 @@ ul {
   font-weight: 600;
   margin-bottom: 30px;
   text-align: center;
-  color: #ffd700; /* gold-ish */
+  color: #ffd700;
+  /* gold-ish */
 }
 
 /* Video grid */
@@ -237,9 +239,11 @@ ul {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
 }
+
 .video-card:hover {
   transform: scale(1.03);
 }
+
 /* .video-card iframe {
   width: 100%;
   height: 140px;
@@ -269,8 +273,10 @@ ul {
   height: 160px;
   overflow: hidden;
   border-bottom: 1px solid #333;
-  padding: 5px; /* ✅ inner space like margin */
-  box-sizing: border-box; /* ✅ ensures padding stays inside 160px */
+  padding: 5px;
+  /* ✅ inner space like margin */
+  box-sizing: border-box;
+  /* ✅ ensures padding stays inside 160px */
 }
 
 .thumbnail-wrapper img {
@@ -288,7 +294,8 @@ ul {
 }
 
 .thumbnail-wrapper:hover img {
-  transform: scale(0.95); /* 👈 Slight squeeze inward */
+  transform: scale(0.95);
+  /* 👈 Slight squeeze inward */
 }
 
 
@@ -331,6 +338,85 @@ ul {
   color: #000;
   transform: translateY(-2px);
 }
+
+
+
+/* ===== Frontend Tutorials Section ===== */
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.tutorials {
+  padding: 30px 20px;
+  /* background: linear-gradient(to right, #161620, #1b1b2e); */
+  color: #fff;
+}
+
+.tutorials .section-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.tutorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.tutorial-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  transition: transform 0.3s ease;
+}
+
+.tutorial-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-box {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.video-box iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+}
+
+.tutorial-card h3 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.tutorial-card p {
+  font-size: 14px;
+  color: #ccc;
+}
+
 
 
 
@@ -518,10 +604,12 @@ ul {
     flex-direction: column;
     padding: 30px;
   }
+
   .footer-links-group {
     flex-direction: column;
     gap: 2rem;
   }
+
   .footer-connect {
     max-width: 100%;
   }
