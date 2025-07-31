@@ -1,3 +1,20 @@
+const navHamburger = document.getElementById("navHamburger");
+const navSideMenu = document.getElementById("navSideMenu");
+const navCloseBtn = document.getElementById("navCloseBtn");
+
+navHamburger.addEventListener("click", () => {
+  navSideMenu.classList.add("open");
+  navHamburger.classList.add("hide"); // Hide hamburger when menu opens
+});
+
+navCloseBtn.addEventListener("click", () => {
+  navSideMenu.classList.remove("open");
+  navHamburger.classList.remove("hide"); // Show hamburger again
+});
+
+
+
+
 document.querySelectorAll(".submenu").forEach(function (submenu) {
   submenu.addEventListener("mouseenter", function () {
     const submenuDropdown = this.querySelector(".dropdown-submenu");
