@@ -15,36 +15,36 @@ navCloseBtn.addEventListener("click", () => {
 
 
 
-document.querySelectorAll(".submenu").forEach(function (submenu) {
-  submenu.addEventListener("mouseenter", function () {
-    const submenuDropdown = this.querySelector(".dropdown-submenu");
-    if (!submenuDropdown) return;
+// document.querySelectorAll(".submenu").forEach(function (submenu) {
+//   submenu.addEventListener("mouseenter", function () {
+//     const submenuDropdown = this.querySelector(".dropdown-submenu");
+//     if (!submenuDropdown) return;
 
-    // Remove class first to reset position
-    submenuDropdown.classList.remove("open-left");
+//     // Remove class first to reset position
+//     submenuDropdown.classList.remove("open-left");
 
-    const rect = submenuDropdown.getBoundingClientRect();
-    const overflowRight = rect.right > window.innerWidth;
+//     const rect = submenuDropdown.getBoundingClientRect();
+//     const overflowRight = rect.right > window.innerWidth;
 
-    if (overflowRight) {
-      submenuDropdown.classList.add("open-left");
-    }
-  });
-});
+//     if (overflowRight) {
+//       submenuDropdown.classList.add("open-left");
+//     }
+//   });
+// });
 
-function adjustCustomDropdownPosition(el) {
-  const menu = el.querySelector(".custom-menu");
-  if (!menu) return;
+// function adjustCustomDropdownPosition(el) {
+//   const menu = el.querySelector(".custom-menu");
+//   if (!menu) return;
 
-  menu.classList.remove("open-left");
+//   menu.classList.remove("open-left");
 
-  const rect = menu.getBoundingClientRect();
-  const overflowRight = rect.right > window.innerWidth;
+//   const rect = menu.getBoundingClientRect();
+//   const overflowRight = rect.right > window.innerWidth;
 
-  if (overflowRight) {
-    menu.classList.add("open-left");
-  }
-}
+//   if (overflowRight) {
+//     menu.classList.add("open-left");
+//   }
+// }
 
 // Attach on hover for all custom dropdowns
 document
