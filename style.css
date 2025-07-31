@@ -1713,6 +1713,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .social-icon.linkedin {
@@ -2186,6 +2187,42 @@ form button {
   line-height: 1.6;
 }
 
+
+@media screen and (max-width: 768px) {
+  .container-blogs {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  .blogs-section {
+    padding: 40px 16px;
+  }
+
+  .blog-scroll-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
+    gap: 20px;
+  }
+
+  .blog-post-card {
+    max-height: none; /* Allow full height on mobile */
+    overflow-y: visible;
+    padding: 20px;
+  }
+
+  .blog-title {
+    font-size: 18px;
+  }
+
+  .blog-meta {
+    font-size: 12px;
+  }
+
+  .blog-content p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
 /* Job & Internship listings */
 .container-jobs {
   max-width: 1300px;
@@ -2266,6 +2303,50 @@ form button {
 .visit-btn:hover {
   background-color: #0056b3;
 }
+
+@media screen and (max-width: 768px) {
+  .internship-portals {
+    padding: 40px 16px;
+  }
+
+  .container-jobs {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .portal-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .portal-card {
+    padding: 16px;
+  }
+
+  .portal-card h3 {
+    font-size: 18px;
+  }
+
+  .portal-card p {
+    font-size: 13px;
+  }
+
+  .portal-card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .visit-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
 
 
 
