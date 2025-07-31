@@ -814,4 +814,21 @@ function closePopup() {
   popup.classList.add("hidden");
 }
 
-// project sec
+// support sec
+document.addEventListener("DOMContentLoaded", function () {
+    const copyBtn = document.getElementById("copy-upi");
+    const upiID = document.getElementById("upi-id");
+    const copyMsg = document.getElementById("copy-msg");
+
+    copyBtn.addEventListener("click", function () {
+      const upiText = upiID.textContent;
+      navigator.clipboard.writeText(upiText).then(() => {
+        copyMsg.style.display = "inline";
+        setTimeout(() => {
+          copyMsg.style.display = "none";
+        }, 2000);
+      }).catch(err => {
+        alert("Failed to copy: " + err);
+      });
+    });
+  });

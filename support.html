@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Contact | CodeWithHappy</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <title>Support Me | CodeWithHappy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
-
 <body>
-
     <header class="navbar">
     <div class="nav-container">
       <div class="logo">
@@ -69,8 +66,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a href="#" class="dropdown-toggle">Practice & Project <i
-                class="fa-solid fa-chevron-down"></i></a>
+            <a href="#" class="dropdown-toggle">Practice & Project <i class="fa-solid fa-chevron-down"></i></a>
 
             <ul class="dropdown-menu">
               <li><a href="project.html">All Projects & Practices</a></li>
@@ -168,8 +164,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a href="#" class="dropdown-toggle">Practice & Project <i
-                class="fa-solid fa-chevron-down"></i></a>
+            <a href="#" class="dropdown-toggle">Practice & Project <i class="fa-solid fa-chevron-down"></i></a>
 
             <ul class="dropdown-menu">
               <li><a href="project.html">All Projects & Practices</a></li>
@@ -228,48 +223,44 @@
     </div>
   </header>
 
-    <section class="contact-wrapper">
-        <div class="contact-container">
-            <h2>Get in Touch</h2>
-            <form id="contactForm">
-                <input type="text" name="name" placeholder="Your Name" required />
-                <input type="email" name="email" placeholder="Your Email" required />
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+  <section class="support-wrapper">
+  <div class="support-glass">
+    <div class="support-left">
+      <h2>Support My Work 💖</h2>
+      <p>If you’ve found my content helpful, you can support me through UPI. Every contribution helps me continue building awesome content — for free!</p>
 
-        <div class="social-container">
-            <h3>Connect with Me</h3>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/beingshappy/" target="_blank" class="social-icon linkedin">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/beingshappy" target="_blank" class="social-icon github">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=satpathy707@gmail.com" class="social-icon gmail"
-                    target="_blank">
-                    <i class="fas fa-envelope"></i>
-                </a>
+      <div class="upi-buttons">
+        <a href="upi://pay?pa=beingshappy@upi&pn=Happy&am=50&cu=INR" target="_blank" class="upi-btn gpay">Google Pay</a>
+        <a href="upi://pay?pa=beingshappy@upi&pn=Happy&am=50&cu=INR" target="_blank" class="upi-btn phonepe">PhonePe</a>
+        <a href="upi://pay?pa=beingshappy@upi&pn=Happy&am=50&cu=INR" target="_blank" class="upi-btn paytm">Paytm</a>
+      </div>
 
+      <p class="note">Or scan the QR on the right to contribute via any UPI app.</p>
 
-                </a>
-            </div>
-        </div>
-    </section>
+      <div class="upi-copy-container">
+        <span id="upi-id">sahasransusatpathy@ybl</span>
+        <button id="copy-upi" class="copy-btn">Copy</button>
+        <span id="copy-msg" class="copy-msg">Copied!</span>
+      </div>
 
-    <!-- Popup -->
-    <div id="thankYouPopup" class="popup hidden">
-        <div class="popup-content">
-            <h2>🎉 Thank You!</h2>
-            <p>Your message has been sent successfully.</p>
-            <button onclick="closePopup()">Close</button>
-        </div>
+      <div class="testimonials">
+        <h3>💬 Supporter Shoutouts</h3>
+        <ul>
+          <li>“Thanks to <strong>Srijay</strong> for supporting 💖”</li>
+          <li>“Appreciate your work! — <strong>Rakesh</strong> 🙌”</li>
+          <li>“Loved the notes & tools 🔥 — <strong>Badri</strong>”</li>
+        </ul>
+      </div>
     </div>
 
+    <div class="support-right">
+      <img src="images/qr.jpg" alt="Scan UPI QR Code" />
+    </div>
+  </div>
+</section>
 
-    <footer class="footer-glass">
+
+<footer class="footer-glass">
     <div class="footer-wrapper">
 
       <div class="footer-brand">
@@ -336,12 +327,6 @@
     <a href="#" class="scrollBtn" title="Back to Top">↑</a>
   </footer>
 
-
-
-
-
     <script src="script.js"></script>
-
 </body>
-
 </html>

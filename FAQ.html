@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Contact | CodeWithHappy</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <title>FAQ | CodeWithHappy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
-
 <body>
-
     <header class="navbar">
     <div class="nav-container">
       <div class="logo">
@@ -228,48 +225,53 @@
     </div>
   </header>
 
-    <section class="contact-wrapper">
-        <div class="contact-container">
-            <h2>Get in Touch</h2>
-            <form id="contactForm">
-                <input type="text" name="name" placeholder="Your Name" required />
-                <input type="email" name="email" placeholder="Your Email" required />
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-
-        <div class="social-container">
-            <h3>Connect with Me</h3>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/beingshappy/" target="_blank" class="social-icon linkedin">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/beingshappy" target="_blank" class="social-icon github">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=satpathy707@gmail.com" class="social-icon gmail"
-                    target="_blank">
-                    <i class="fas fa-envelope"></i>
-                </a>
-
-
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Popup -->
-    <div id="thankYouPopup" class="popup hidden">
-        <div class="popup-content">
-            <h2>🎉 Thank You!</h2>
-            <p>Your message has been sent successfully.</p>
-            <button onclick="closePopup()">Close</button>
-        </div>
+  <section class="faq-section glass-container">
+  <h2 class="section-heading">Frequently Asked Questions</h2>
+  <div class="faq-container">
+    <div class="faq-item">
+      <h3 class="faq-question">What is this website about?</h3>
+      <p class="faq-answer">This website is a free resource hub for learning full-stack web development. All content is accessible without login or payment.</p>
     </div>
 
+    <div class="faq-item">
+      <h3 class="faq-question">Is everything free?</h3>
+      <p class="faq-answer">Yes, absolutely! Every resource, note, project, or tutorial provided here is completely free of charge.</p>
+    </div>
 
-    <footer class="footer-glass">
+    <div class="faq-item">
+      <h3 class="faq-question">Do I need to sign up?</h3>
+      <p class="faq-answer">No sign-up is required. You can start learning immediately without creating an account.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-question">What topics are covered?</h3>
+      <p class="faq-answer">We cover HTML, CSS, JavaScript, React, Node.js, MongoDB, Express, Git, GitHub, Responsive Design, Deployment, and more.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-question">Are there downloadable notes?</h3>
+      <p class="faq-answer">Yes, you can download notes in PDF format for each topic. Just go to the “Download Notes” section.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-question">Will more topics be added?</h3>
+      <p class="faq-answer">Yes! We’re continuously adding more advanced and trending topics based on demand and developer interest.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-question">Can I contribute?</h3>
+      <p class="faq-answer">We welcome contributions! Soon we’ll launch a “Contribute” page where you can submit content or improvements.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-question">Is there a certificate?</h3>
+      <p class="faq-answer">Currently, we don’t offer certificates. Our goal is pure learning and skill-building.</p>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer-glass">
     <div class="footer-wrapper">
 
       <div class="footer-brand">
@@ -335,13 +337,6 @@
     <!-- Scroll-to-top link -->
     <a href="#" class="scrollBtn" title="Back to Top">↑</a>
   </footer>
-
-
-
-
-
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
-
 </html>
