@@ -13,8 +13,11 @@
   --rose-gold: rgba(212, 175, 55, 0.5);
   --text-main: #ffffff;
 }
+
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 
@@ -24,6 +27,8 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #0287cf 0%, #00486f 100%);
   color: var(--text-main);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 h1,
@@ -356,7 +361,7 @@ ul {
   padding: 2rem;
   transition: 0.3s ease;
   z-index: 1000;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .nav-side-menu.open {
@@ -451,10 +456,10 @@ ul {
 
 .roadmap-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* 3 cards per row */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
+
 
 
 .roadmap-card {
@@ -1480,18 +1485,19 @@ ul {
 
 /* tools-section */
 .tools-section {
-  padding: 40px 0;
+  padding: 40px 16px; /* prevent side overflow on mobile */
   display: flex;
   flex-direction: column;
   gap: 50px;
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 .tool-full {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 24px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
   border-radius: 16px;
@@ -1512,6 +1518,22 @@ ul {
   border-radius: 12px;
   background: white;
 }
+
+/* 🪄 Responsive tweaks for mobile */
+@media (max-width: 1100px) {
+  .tool-full {
+    padding: 0;
+  }
+
+  .tool-full h2 {
+    font-size: 1.2rem;
+  }
+
+  .tool-full iframe {
+    height: 300px;
+  }
+}
+
 
 
 /* free-assets */
@@ -1876,19 +1898,97 @@ form button {
 /* project section */
 .main-container {
   max-width: 1300px;
-  /* 👈 Was 1400px, now narrower */
-  margin: 0 auto;
-  padding: 40px;
+  margin: 40px auto;
+  padding: 40px 20px;
+  /* reduced horizontal padding */
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-  margin-top: 40px;
-  margin-bottom: 40px;
-
+  box-sizing: border-box;
 }
+
+
+.about-section {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  color: var(--gold, #ffc107);
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+
+  .main-container,
+  .webdev-container,
+  .roadmap-container,
+  .credit-container {
+    padding: 30px;
+    margin: 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .main-container,
+  .webdev-container,
+  .roadmap-container,
+  .credit-container {
+    padding: 24px;
+    margin: 20px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .about-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .about-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .main-container,
+  .webdev-container,
+  .roadmap-container,
+  .credit-container {
+    padding: 20px;
+    margin: 16px;
+  }
+}
+
 
 
 /* Section title */
