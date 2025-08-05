@@ -1509,7 +1509,7 @@ ul {
 
 .tool-full h2 {
   font-size: 1.6rem;
-  color: #0f172a;
+  
   margin-bottom: 20px;
 }
 
@@ -1552,7 +1552,7 @@ ul {
   font-size: 36px;
   text-align: center;
   margin-bottom: 50px;
-  color: #fff;
+  
 }
 
 .asset-grid {
@@ -1589,7 +1589,7 @@ ul {
 .asset-card h3 {
   font-size: 22px;
   margin-bottom: 10px;
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 
 .asset-card p {
@@ -2450,7 +2450,7 @@ form button {
   text-align: center;
   font-size: 32px;
   margin-bottom: 40px;
-  color: #fff;
+  /* color: #fff; */
 }
 
 .challenge-tabs {
@@ -2660,7 +2660,7 @@ pre {
   text-align: center;
   font-size: 32px;
   margin-bottom: 40px;
-  color: #ffffff;
+  /* color: #ffffff; */
   font-weight: bold;
 }
 
@@ -2808,7 +2808,7 @@ pre {
 .testimonials h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  color: #fff;
+  /* color: #fff; */
 }
 
 .testimonials ul {
